@@ -1,5 +1,5 @@
 [versions]
-annotation = "1.9.1"
+annotation = "1.8.1"
 commonsIo = "2.18.0"
 constraintlayout = "2.2.1"
 core = "3.5.3"

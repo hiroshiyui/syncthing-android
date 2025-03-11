@@ -1,4 +1,3 @@
-import com.android.build.api.dsl.Packaging
 import org.gradle.configurationcache.extensions.capitalized
 
 plugins {
@@ -39,6 +38,7 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        buildConfig = true
     }
 
     defaultConfig {
