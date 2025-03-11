@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.Packaging
 import org.gradle.configurationcache.extensions.capitalized
 
 plugins {
@@ -7,33 +8,33 @@ plugins {
 }
 
 dependencies {
-    implementation("eu.chainfire:libsuperuser:1.1.1")
-    implementation("com.google.android.material:material:1.8.0")
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.mindrot:jbcrypt:0.4")
-    implementation("com.google.guava:guava:32.1.3-android")
-    implementation("com.annimon:stream:1.2.2")
-    implementation("com.android.volley:volley:1.2.1")
-    implementation("commons-io:commons-io:2.11.0")
+    implementation(libs.libsuperuser)
+    implementation(libs.material)
+    implementation(libs.gson)
+    implementation(libs.jbcrypt)
+    implementation(libs.guava)
+    implementation(libs.stream)
+    implementation(libs.volley)
+    implementation(libs.commons.io)
 
     implementation("com.journeyapps:zxing-android-embedded:4.3.0") {
         isTransitive = false
     }
-    implementation("com.google.zxing:core:3.4.1")
+    implementation(libs.core)
 
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("com.google.dagger:dagger:2.49")
-    annotationProcessor("com.google.dagger:dagger-compiler:2.49")
-    androidTestImplementation("androidx.test:rules:1.4.0")
-    androidTestImplementation("androidx.annotation:annotation:1.2.0")
+    implementation(libs.constraintlayout)
+    implementation(libs.dagger)
+    annotationProcessor(libs.dagger.compiler)
+    androidTestImplementation(libs.rules)
+    androidTestImplementation(libs.annotation)
 }
 
 android {
     val ndkVersionShared = rootProject.extra.get("ndkVersionShared")
     // Changes to these values need to be reflected in `../docker/Dockerfile`
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
-    ndkVersion = "${ndkVersionShared}"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
+    ndkVersion = "$ndkVersionShared"
 
     buildFeatures {
         dataBinding = true
@@ -43,7 +44,7 @@ android {
     defaultConfig {
         applicationId = "com.nutomic.syncthingandroid"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 35
         versionCode = 4395
         versionName = "1.28.1"
         testApplicationId = "com.nutomic.syncthingandroid.test"

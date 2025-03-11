@@ -1,0 +1,32 @@
+[versions]
+annotation = "1.9.1"
+commonsIo = "2.18.0"
+constraintlayout = "2.2.1"
+core = "3.5.3"
+dagger = "2.55"
+gson = "2.12.1"
+guava = "33.4.0-android"
+jbcrypt = "0.4"
+libsuperuser = "1.1.1"
+material = "1.12.0"
+rules = "1.6.1"
+stream = "1.2.2"
+volley = "1.2.1"
+
+[libraries]
+annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commonsIo" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
+libsuperuser = { module = "eu.chainfire:libsuperuser", version.ref = "libsuperuser" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+rules = { module = "androidx.test:rules", version.ref = "rules" }
+stream = { module = "com.annimon:stream", version.ref = "stream" }
+volley = { module = "com.android.volley:volley", version.ref = "volley" }
+
+[plugins]
