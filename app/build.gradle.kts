@@ -86,6 +86,7 @@ android {
             useLegacyPackaging = true
         }
     }
+    namespace = "com.nutomic.syncthingandroid"
 }
 
 play {
